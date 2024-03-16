@@ -1,0 +1,57 @@
+/* static/css/style.css */
+
+/* Reset some default styles and set a basic font */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the analysis container */
+.analysis {
+  max-width: 95%; /* Set the max-width to 80% of the viewport width */
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center-align headings and paragraphs within the analysis container */
+h1, h2, p {
+  text-align: center;
+}
+
+/* Styling for the plot and table containers */
+.plot, .table-container {
+  margin-top: 20px;
+}
+
+/* Responsive styling for images within the plot container */
+.plot img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Styling for tables with horizontal scroll */
+.table-container {
+  overflow-x: auto;
+  max-width: 100%; /* Set the max-width to 100% of the container */
+}
+
+/* Styling for individual tables */
+.table {
+  width: max-content;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for table headings */
+.table h2 {
+  margin-bottom: 10px;
+}
+
+/* Add more styles as needed */

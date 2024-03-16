@@ -1,0 +1,49 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis App</title>
+    
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Main container for analysis results -->
+    <div class="analysis">
+        <main>
+            <!-- Page title and description -->
+            <h1>Data Analysis Results</h1>
+            <p>Data analysis of house data</p>
+            
+            <!-- Section for displaying the scatter plot -->
+            <section class="plot">
+                <h2>Scatter Plot of sqft_living and price</h2>
+                <!-- Display scatter plot image -->
+                <p><img src="{{ url_for('static', filename='scatter_plot.png') }}" alt="Scatter Plot"></p>
+            </section>
+            
+            <!-- Section for displaying summary statistics -->
+            <section class="table-container">
+                <h2>Summary Statistics</h2>
+                <!-- Display summary statistics table -->
+                <div class="table">
+                    {{ results['summary_stats']|safe }}
+                </div>
+            </section>
+            
+            <!-- Section for displaying the correlation matrix -->
+            <section class="table-container">
+                <h2>Correlation Matrix</h2>
+                <!-- Display correlation matrix table -->
+                <div class="table">
+                    {{ results['correlation_matrix']|safe }}
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
